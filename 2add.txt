@@ -1,0 +1,29 @@
+FSL, AFNI, ANTs, BIDS MRIQC FMRIPREP
+
+R, Python, Shell (POSIX shell, bash, zsh),
+Latex, Markdown, JSON HTML
+Javascript
+MATLAB
+
+git, docker, singularity
+vim
+
+github
+phone
+e-mail
+Twitter?
+
+Consulting COPRED in experience
+
+Sem abroad move to workshops/courses
+
+2 years in INSTITUTO NACIONAL DE PSIQUIATRIA SUBD INV CLIN
+3 months LNI NIAAA NIH
+
+Neurohackademy 2019
+
+Look up publication in UNAM - chapter
+Terapia Familiar Sistémica y la comunidad LGBT
+Capitulo 2: Derechos Sexuales y reproductivos: reflexiones para terapeutas
+
+
