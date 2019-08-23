@@ -245,6 +245,20 @@
 \newcommand*{\subentrylocationstyle}[1]{{\fontsize{7pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 \newcommand*{\subdescriptionstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
+% For elements of courses
+\newcommand*{\coursetitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\coursedatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{text} #1}}
+\newcommand*{\courseinstructorstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{awesome} #1}}
+\newcommand*{\courselocationstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\coursecitystyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+
+% For elements of proceedings
+\newcommand*{\proceedingtitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\color{darktext} #1}}
+\newcommand*{\proceedingdatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{text} #1}}
+\newcommand*{\proceedingeventstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{awesome} #1}}
+\newcommand*{\proceedinglocationstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\color{graytext} #1}}
+\newcommand*{\proceedingcitystyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+
 % For elements of honor
 \newcommand*{\honortitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
 \newcommand*{\honorpositionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
@@ -564,6 +578,79 @@
       {}
       {\multicolumn{2}{L{17.0cm}}{\subdescriptionstyle{#4}} \\}
   \end{tabular*}
+}
+
+% Define an environment for courses
+\newenvironment{cvcourses}{
+    \begin{center}
+}{
+    \end{center}
+}
+
+% Define an entry for courses
+% Usage: \cvcourse{<title>}{<instructor>}{<location>}{<city>}{<date>}
+\newcommand*{\cvcourse}[5]{
+    \setlength\tabcolsep{0pt}
+    \setlength{\extrarowheight}{0pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{2.5cm} L{13.0cm} R{2.5cm}}
+        \coursedatestyle{#5} &
+        \coursetitlestyle{#1}
+        \ifthenelese{\equal{#2}{}}
+            {}
+            {\\\courseinstructorstyle{#2
+                \ifthenelse{\equal{#3}{}}
+                    {}
+                    {; }
+                }
+            }
+        \ifthenelse{\equal{#3}{}}
+            {}
+            {\ifthenelse{\equal{#2}{}}
+                {\\}
+                {}
+                \courselocationstyle{#3}
+            } &
+        \ifthenelse{\equal{#4}{}}
+            {\\}
+            {\coursecitystyle{#4}\\}
+    \end{tabular*}
+}
+
+
+% Define an environment for proceedings
+\newenvironment{cvproceedings}{
+    \begin{center}
+}{
+    \end{center}
+}
+
+% Define an entry for proceeding
+% Usage: \cvproceeding{<title>}{<event>}{<location>}{<city>}{<date>}
+\newcommand*{\cvproceeding}[5]{
+    \setlength\tabcolsep{0pt}
+    \setlength{\extrarowheight}{0pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{2.5cm} L{13.0cm} R{2.5cm}}
+        \proceedingdatestyle{#5} &
+        \proceedingtitlestyle{#1}
+        \ifthenelese{\equal{#2}{}}
+            {}
+            {\\\proceedingeventstyle{#2
+                \ifthenelse{\equal{#3}{}}
+                    {}
+                    {; }
+                }
+            }
+        \ifthenelse{\equal{#3}{}}
+            {}
+            {\ifthenelse{\equal{#2}{}}
+                {\\}
+                {}
+                \courselocationstyle{#3}
+            } &
+        \ifthenelse{\equal{#4}{}}
+            {\\}
+            {\coursecitystyle{#4}\\}
+    \end{tabular*}
 }
 
 % Define an environment for cvhonor
