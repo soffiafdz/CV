@@ -36,8 +36,8 @@
 \DeclareOption{draft}{\setlength\overfullrule{5pt}}
 \DeclareOption{final}{\setlength\overfullrule{0pt}}
 % Inherit options of article
-\DeclareOption*{
-  \PassOptionsToClass{\CurrentOption}{article}
+\DeclareOption*{%
+  \PassOptionsToClass{\CurrentOption}{article}%
 }
 \ProcessOptions\relax
 \LoadClass{article}
@@ -48,6 +48,8 @@
 %-------------------------------------------------------------------------------
 % Needed to make fixed length table
 \RequirePackage{array}
+% Needed to handle multirows in tables
+\RequirePackage{multirow}
 % Needed to handle list environment
 \RequirePackage[inline]{enumitem}
 % Needed to handle text alignment
@@ -85,13 +87,13 @@
 \RequirePackage{parskip}
 % Needed to deal hyperlink
 \RequirePackage{hyperref}
-\hypersetup{
-  pdftitle={},
-  pdfauthor={},
-  pdfsubject={},
-  pdfkeywords={},
-  colorlinks=false,
-  allbordercolors=white
+\hypersetup{%
+  pdftitle={},%
+  pdfauthor={},%
+  pdfsubject={},%
+  pdfkeywords={},%
+  colorlinks=false,%
+  allbordercolors=white%
 }
 
 
@@ -174,45 +176,45 @@
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
 % Set font for header (default is Roboto)
-\newfontfamily\headerfont[
-  Path=\@fontdir,
-  UprightFont=*-Regular,
-  ItalicFont=*-Italic,
-  BoldFont=*-Bold,
-  BoldItalicFont=*-BoldItalic,
+\newfontfamily\headerfont[%
+  Path=\@fontdir,%
+  UprightFont=*-Regular,%
+  ItalicFont=*-Italic,%
+  BoldFont=*-Bold,%
+  BoldItalicFont=*-BoldItalic,%
 ]{Roboto}
 
-\newfontfamily\headerfontlight[
-  Path=\@fontdir,
-  UprightFont=*-Thin,
-  ItalicFont=*-ThinItalic,
-  BoldFont=*-Medium,
-  BoldItalicFont=*-MediumItalic,
+\newfontfamily\headerfontlight[%
+  Path=\@fontdir,%
+  UprightFont=*-Thin,%
+  ItalicFont=*-ThinItalic,%
+  BoldFont=*-Medium,%
+  BoldItalicFont=*-MediumItalic,%
 ]{Roboto}
 
 % Set font for footer (default is Source Sans Pro)
-\newfontfamily\footerfont[
-  Path=\@fontdir,
-  UprightFont=*-Regular,
-  ItalicFont=*-It,
-  BoldFont=*-Bold
+\newfontfamily\footerfont[%
+  Path=\@fontdir,%
+  UprightFont=*-Regular,%
+  ItalicFont=*-It,%
+  BoldFont=*-Bold%
 ]{SourceSansPro}
 
 % Set font for body (default is Source Sans Pro)
-\newfontfamily\bodyfont[
-  Path=\@fontdir,
-  UprightFont=*-Regular,
-  ItalicFont=*-It,
-  BoldFont=*-Bold,
-  BoldItalicFont=*-BoldIt
+\newfontfamily\bodyfont[%
+  Path=\@fontdir,%
+  UprightFont=*-Regular,%
+  ItalicFont=*-It,%
+  BoldFont=*-Bold,%
+  BoldItalicFont=*-BoldIt%
 ]{SourceSansPro}
 
-\newfontfamily\bodyfontlight[
-  Path=\@fontdir,
-  UprightFont=*-Light,
-  ItalicFont=*-LightIt,
-  BoldFont=*-Semibold,
-  BoldItalicFont=*-SemiboldIt
+\newfontfamily\bodyfontlight[%
+  Path=\@fontdir,%
+  UprightFont=*-Light,%
+  ItalicFont=*-LightIt,%
+  BoldFont=*-Semibold,%
+  BoldItalicFont=*-SemiboldIt%
 ]{SourceSansPro}
 
 
@@ -246,28 +248,29 @@
 \newcommand*{\subdescriptionstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of courses
-\newcommand*{\coursetitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\coursedatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{text} #1}}
-\newcommand*{\courseinstructorstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{awesome} #1}}
-\newcommand*{\courselocationstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\coursecitystyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\newcommand*{\coursetitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\coursedatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\newcommand*{\courseinstructorstyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{awesome} #1}}
+\newcommand*{\courselocationstyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{text} #1}}
+\newcommand*{\coursecitystyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 
 % For elements of proceedings
-\newcommand*{\proceedingtitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\color{darktext} #1}}
-\newcommand*{\proceedingdatestyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{text} #1}}
-\newcommand*{\proceedingeventstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{awesome} #1}}
-\newcommand*{\proceedinglocationstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\color{graytext} #1}}
+\newcommand*{\proceedingtitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\color{darktext} #1}}
+\newcommand*{\proceedingtypestyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{graytext} (#1)}}
+\newcommand*{\proceedingdatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\newcommand*{\proceedingeventstyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{awesome} #1}}
+\newcommand*{\proceedinglocationstyle}[1]{{\fontsize{7pt}{1em}\bodyfontlight\color{text} #1}}
 \newcommand*{\proceedingcitystyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 
 % For elements of honor
 \newcommand*{\honortitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
-\newcommand*{\honorpositionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\honordatestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
-\newcommand*{\honorlocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\newcommand*{\honorpositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\color{darktext} #1}}
+\newcommand*{\honordatestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\color{graytext} #1}}
+\newcommand*{\honorlocationstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 
 % For elements of skill
-\newcommand*{\skilltypestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\skillsetstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{text} #1}}
+\newcommand*{\skilltypestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
+\newcommand*{\skillsetstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\color{text} #1}}
 
 % For elements of the cover letter
 \newcommand*{\paragraphstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
@@ -404,300 +407,283 @@
 %-------------------------------------------------------------------------------
 % Define a header for CV
 % Usage: \makecvheader
-\newcommand*{\makecvheader}{
-  \begin{center}
-    \headerfirstnamestyle{
-      \@firstname
-    } \headerlastnamestyle{
-      \@lastname
-    }
-    \\
-    \vspace{0.4mm}
-    \ifthenelse{\isundefined{\@position}}{}{\headerpositionstyle{\@position\\}}
-    \vspace{0.4mm}
-    \ifthenelse{\isundefined{\@address}}{}{\headeraddressstyle{\@address\\}}
-    \vspace{-0.5mm}
-    \headersocialstyle{
-      \newbool{isstart}
-      \setbool{isstart}{true}
-      \ifthenelse{\isundefined{\@mobile}}
-        {}
-        {
-          \faMobile\ \@mobile
-          \setbool{isstart}{false}
-        }
-      \ifthenelse{\isundefined{\@email}}
-        {}
-        {
-          \ifbool{isstart}
-            {
-              \setbool{istart}{false}
-            }
-            {\@headersocialsep}
-          \href{mailto:\@email}{\faEnvelope\ \@email}
-        }
-      \ifthenelse{\isundefined{\@homepage}}
-        {}
-        {
-          \ifbool{isstart}
-            {
-              \setbool{istart}{false}
-            }
-            {\@headersocialsep}
-          \href{http://\@homepage}{\faHome\ \@homepage}
-        }
-      \ifthenelse{\isundefined{\@github}}
-        {}
-        {
-          \ifbool{isstart}
-            {
-              \setbool{istart}{false}
-            }
-            {\@headersocialsep}
-          \href{https://github.com/\@github}{\faGithubSquare\ \@github}
-        }
-      \ifthenelse{\isundefined{\@stackoverflowid}}
-        {}
-        {
-          \ifbool{isstart}
-            {
-              \setbool{istart}{false}
-            }
-            {\@headersocialsep}
-          \href{https://stackoverflow.com/users/\@stackoverflowid}{\faStackOverflow\ \@stackoverflowname}
-        }
-      \ifthenelse{\isundefined{\@linkedin}}
-        {}
-        {
-          \ifbool{isstart}
-            {
-              \setbool{istart}{false}
-            }
-            {\@headersocialsep}
-          \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedinSquare\ \@linkedin}
-        }
-      \ifthenelse{\isundefined{\@twitter}}
-        {}
-        {
-          \ifbool{isstart}
-            {
-              \setbool{istart}{false}
-            }
-            {\@headersocialsep}
-          \href{https://twitter.com/\@twitter}{\faTwitter\ \@twitter}
-        }
-      \ifthenelse{\isundefined{\@skype}}
-        {}
-        {
-          \ifbool{isstart}
-            {
-              \setbool{istart}{false}
-            }
-            {\@headersocialsep}
-          \faSkype\ \@skype
-        }
-    } \\
-    \ifthenelse{\isundefined{\@quote}}
-      {}
-      {\vspace{6.0mm}\headerquotestyle{\@quote\\}\vspace{5.0mm}}
-  \end{center}
+\newcommand*{\makecvheader}{%
+  \begin{center}%
+    \headerfirstnamestyle{%
+      \@firstname%
+    } \headerlastnamestyle{%
+      \@lastname%
+    }%
+    \\%
+    \vspace{0.4mm}%
+    \ifthenelse{\isundefined{\@position}}{}{\headerpositionstyle{\@position\\}}%
+    \vspace{0.4mm}%
+    \ifthenelse{\isundefined{\@address}}{}{\headeraddressstyle{\@address\\}}%
+    \vspace{-0.5mm}%
+    \headersocialstyle{%
+      \newbool{isstart}%
+      \setbool{isstart}{true}%
+      \ifthenelse{\isundefined{\@mobile}}%
+        {}%
+        {%
+          \faMobile\ \@mobile%
+          \setbool{isstart}{false}%
+        }%
+      \ifthenelse{\isundefined{\@email}}%
+        {}%
+        {%
+          \ifbool{isstart}%
+            {%
+              \setbool{istart}{false}%
+            }%
+            {\@headersocialsep}%
+          \href{mailto:\@email}{\faEnvelope\ \@email}%
+        }%
+      \ifthenelse{\isundefined{\@homepage}}%
+        {}%
+        {%
+          \ifbool{isstart}%
+            {%
+              \setbool{istart}{false}%
+            }%
+            {\@headersocialsep}%
+          \href{http://\@homepage}{\faHome\ \@homepage}%
+        }%
+      \ifthenelse{\isundefined{\@github}}%
+        {}%
+        {%
+          \ifbool{isstart}%
+            {%
+              \setbool{istart}{false}%
+            }%
+            {\@headersocialsep}%
+          \href{https://github.com/\@github}{\faGithubSquare\ \@github}%
+        }%
+      \ifthenelse{\isundefined{\@stackoverflowid}}%
+        {}%
+        {%
+          \ifbool{isstart}%
+            {%
+              \setbool{istart}{false}%
+            }%
+            {\@headersocialsep}%
+          \href{https://stackoverflow.com/users/\@stackoverflowid}{\faStackOverflow\ \@stackoverflowname}%
+        }%
+      \ifthenelse{\isundefined{\@linkedin}}%
+        {}%
+        {%
+          \ifbool{isstart}%
+            {%
+              \setbool{istart}{false}%
+            }%
+            {\@headersocialsep}%
+          \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedinSquare\ \@linkedin}%
+        }%
+      \ifthenelse{\isundefined{\@twitter}}%
+        {}%
+        {%
+          \ifbool{isstart}%
+            {%
+              \setbool{istart}{false}%
+            }%
+            {\@headersocialsep}%
+          \href{https://twitter.com/\@twitter}{\faTwitter\ \@twitter}%
+        }%
+      \ifthenelse{\isundefined{\@skype}}%
+        {}%
+        {%
+          \ifbool{isstart}%
+            {%
+              \setbool{istart}{false}%
+            }%
+            {\@headersocialsep}%
+          \faSkype\ \@skype%
+        }%
+    } \\%
+    \ifthenelse{\isundefined{\@quote}}%
+      {}%
+      {\vspace{6.0mm}\headerquotestyle{\@quote\\}\vspace{5.0mm}}%
+  \end{center}%
 }
 
 % Define a footer for CV
 % Usage: \makecvfooter{<left>}{<center>}{<right>}
-\newcommand*{\makecvfooter}[3]{
-  \fancyfoot{}
-  \fancyfoot[L]{
-    \footerstyle{#1}
-  }
-  \fancyfoot[C]{
-    \footerstyle{#2}
-  }
-  \fancyfoot[R]{
-    \footerstyle{#3}
-  }
+\newcommand*{\makecvfooter}[3]{%
+  \fancyfoot{}%
+  \fancyfoot[L]{%
+    \footerstyle{#1}%
+  }%
+  \fancyfoot[C]{%
+    \footerstyle{#2}%
+  }%
+  \fancyfoot[R]{%
+    \footerstyle{#3}%
+  }%
 }
 
 % Define a section for CV
 % Usage: \cvsection{<section-title>}
-\newcommand{\cvsection}[1]{
-  \par\addvspace{1.5ex}
-  \phantomsection{}
-  \sectionstyle{#1}
-  \color{gray}\vhrulefill{0.9pt}
-  \par\nobreak\addvspace{1ex}
+\newcommand{\cvsection}[1]{%
+  \par\addvspace{0.85ex}%
+  \phantomsection{}%
+  \sectionstyle{#1}%
+  \color{gray}\vhrulefill{0.9pt}%
+  \par\nobreak\addvspace{0.65ex}%
 }
 
 % Define a subsection for CV
 % Usage: \cvsubsection{<subsection-title>}
-\newcommand{\cvsubsection}[1]{
-  \phantomsection{}
-  \subsectionstyle{#1}
+\newcommand{\cvsubsection}[1]{%
+  \phantomsection{}%
+  \subsectionstyle{#1}%
 }
 
 % Define an environment for cventry
-\newenvironment{cventries}{
-  \begin{center}
-}{
-  \end{center}
+\newenvironment{cventries}{%
+  \begin{center}%
+}{%
+  \end{center}%
 }
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
-\newcommand*{\cventry}[5]{
-  \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.5cm} R{4.5cm}}
-    \ifempty{#5}
-    {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
-    \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
-    \entrypositionstyle{#1} & \entrydatestyle{#4} \\
-    \multicolumn{2}{L{17cm}}{\descriptionstyle{#5}} \\}
-  \end{tabular*}
+\newcommand*{\cventry}[5]{%
+  \setlength\tabcolsep{0pt}%
+  \setlength{\extrarowheight}{0pt}%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.5cm} R{4.5cm}}%
+    \ifempty{#5}%
+    {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\%
+    \entrypositionstyle{#1} & \entrydatestyle{#4} \\}%
+    {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\[-0.70ex]%
+        \quad\entrypositionstyle{#1} & \entrydatestyle{#4} \\[-0.40ex]%
+    \multicolumn{2}{L{17cm}}{\descriptionstyle{#5}} \\[-1.0ex]}%
+  \end{tabular*}%
 }
 
 % Define an environment for cvsubentry
-\newenvironment{cvsubentries}{
-  \begin{center}
-}{
-  \end{center}
+\newenvironment{cvsubentries}{%
+  \begin{center}%
+}{%
+  \end{center}%
 }
+
 % Define a subentry of cv information
 % Usage: \cvsubentry{<position>}{<title>}{<date>}{<description>}
-\newcommand*{\cvsubentry}[4]{
-  \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.5cm} R{4.5cm}}
-    \setlength\leftskip{0.2cm}
-    \subentrytitlestyle{#2} & \ifthenelse{\equal{#1}{}}
-      {\subentrydatestyle{#3}}{}
-    \ifthenelse{\equal{#1}{}}
-      {}
-      {\subentrypositionstyle{#1} & \subentrydatestyle{#3} \\}
-    \ifthenelse{\equal{#4}{}}
-      {}
-      {\multicolumn{2}{L{17.0cm}}{\subdescriptionstyle{#4}} \\}
-  \end{tabular*}
+\newcommand*{\cvsubentry}[4]{%
+  \setlength\tabcolsep{0pt}%
+  \setlength{\extrarowheight}{0pt}%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.5cm} R{4.5cm}}%
+    \setlength\leftskip{0.2cm}%
+    \subentrytitlestyle{#2} & \ifthenelse{\equal{#1}{}}%
+      {\subentrydatestyle{#3}}{}%
+    \ifthenelse{\equal{#1}{}}%
+      {}%
+      {\subentrypositionstyle{#1} & \subentrydatestyle{#3} \\}%
+    \ifthenelse{\equal{#4}{}}%
+      {}%
+      {\multicolumn{2}{L{17.0cm}}{\subdescriptionstyle{#4}} \\}%
+  \end{tabular*}%
 }
 
 % Define an environment for courses
-\newenvironment{cvcourses}{
-    \begin{center}
-}{
-    \end{center}
+\newenvironment{cvcourses}{%
+    \begin{center}%
+}{%
+    \end{center}%
 }
 
 % Define an entry for courses
 % Usage: \cvcourse{<title>}{<instructor>}{<location>}{<city>}{<date>}
-\newcommand*{\cvcourse}[5]{
-    \setlength\tabcolsep{0pt}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{2.5cm} L{13.0cm} R{2.5cm}}
-        \coursedatestyle{#5} &
-        \coursetitlestyle{#1}
-        \ifthenelese{\equal{#2}{}}
-            {}
-            {\\\courseinstructorstyle{#2
-                \ifthenelse{\equal{#3}{}}
-                    {}
-                    {; }
-                }
-            }
-        \ifthenelse{\equal{#3}{}}
-            {}
-            {\ifthenelse{\equal{#2}{}}
-                {\\}
-                {}
-                \courselocationstyle{#3}
-            } &
-        \ifthenelse{\equal{#4}{}}
-            {\\}
-            {\coursecitystyle{#4}\\}
-    \end{tabular*}
-}
-
-
-% Define an environment for proceedings
-\newenvironment{cvproceedings}{
-    \begin{center}
-}{
-    \end{center}
+\newcommand*{\cvcourse}[5]{%
+    \setlength\tabcolsep{0pt}%
+    \setlength{\extrarowheight}{0pt}%
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{14.0cm} R{3.0cm}}%
+        \coursetitlestyle{#1} & \coursecitystyle{#4} \\[-1ex]%
+        \ifempty{#2}%
+        {\quad}%
+        {\quad\courseinstructorstyle{#2}; }\courselocationstyle{#3} & \coursedatestyle{#5} \\%
+    \end{tabular*}%
+}%
+%
+% Define an environment for proceedings%
+\newenvironment{cvproceedings}{%
+    \begin{center}%
+}{%
+    \end{center}%
 }
 
 % Define an entry for proceeding
-% Usage: \cvproceeding{<title>}{<event>}{<location>}{<city>}{<date>}
-\newcommand*{\cvproceeding}[5]{
-    \setlength\tabcolsep{0pt}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{2.5cm} L{13.0cm} R{2.5cm}}
-        \proceedingdatestyle{#5} &
-        \proceedingtitlestyle{#1}
-        \ifthenelese{\equal{#2}{}}
-            {}
-            {\\\proceedingeventstyle{#2
-                \ifthenelse{\equal{#3}{}}
-                    {}
-                    {; }
-                }
-            }
-        \ifthenelse{\equal{#3}{}}
-            {}
-            {\ifthenelse{\equal{#2}{}}
-                {\\}
-                {}
-                \courselocationstyle{#3}
-            } &
-        \ifthenelse{\equal{#4}{}}
-            {\\}
-            {\coursecitystyle{#4}\\}
-    \end{tabular*}
+% Usage: \cvproceeding{<type>}{<title>}{<event>}{<location>}{<city>}{<date>}
+% \renewcommand{\arraystretch}{0.5}
+\newcommand*{\cvproceeding}[6]{%
+    \setlength\tabcolsep{0pt}\setlength{\extrarowheight}{0pt}%
+    \ifempty{#5#4#3}%
+        {%
+            \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{2.2cm} L{14.8cm}}%
+                \proceedingdatestyle{#6} & \multirow{2}{\hsize}{\hspace{-1em}\proceedingtitlestyle{#2}}\\[-1ex]%
+                \proceedingtypestyle{#1} &%
+                \\[0.75ex]%
+            \end{tabular*}%
+        }%
+        {%
+            \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{2.2cm} L{12.0cm} R{2.8cm}}%
+                \proceedingdatestyle{#6} & \proceedingtitlestyle{#2} & \multirow{2}{\hsize}{\hfill\proceedingcitystyle{#5}}\\[-1ex]%
+                \proceedingtypestyle{#1} &%
+                \ifempty{#3}%
+                    {\ifempty{#4}{}{\proceedinglocationstyle{#4}}}%
+                    {\ifempty{#4}{\proceedingeventstyle{#3}}{\proceedingeventstyle{#3; }%
+                    \proceedinglocationstyle{#4}}}\\%
+            \end{tabular*}%
+        }%
 }
 
+
 % Define an environment for cvhonor
-\newenvironment{cvhonors}{
-  \begin{center}
-    \setlength\tabcolsep{0pt}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{13.0cm} R{2.5cm}}
-}{
-    \end{tabular*}
-  \end{center}
+\newenvironment{cvhonors}{%
+  \begin{center}%
+    \setlength\tabcolsep{0pt}%
+    \setlength{\extrarowheight}{0pt}%
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{12.0cm} R{3.5cm}}%
+}{%
+    \end{tabular*}%
+  \end{center}%
 }
+
 % Define a line of cv information(honor, award or something else)
 % Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
-\newcommand*{\cvhonor}[4]{
-  \honordatestyle{#4} & \honorpositionstyle{#1}, \honortitlestyle{#2} & \honorlocationstyle{#3}
-  \\
+\newcommand*{\cvhonor}[4]{%
+  \honordatestyle{#4} & \honorpositionstyle{#1}, \honortitlestyle{#2} & \honorlocationstyle{#3}%
+  \\%
 }
 
 % Define an environment for cvskill
-\newenvironment{cvskills}{
-  \begin{center}
-    \setlength\tabcolsep{1ex}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{15.2cm}}
-}{
-    \end{tabular*}
-  \end{center}
+\newenvironment{cvskills}{%
+  \begin{center}%
+    \setlength\tabcolsep{1ex}%
+    \setlength{\extrarowheight}{0pt}%
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{15.2cm}}%
+}{%
+    \end{tabular*}%
+  \end{center}%
 }
+
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}
-\newcommand*{\cvskill}[2]{
-	\skilltypestyle{#1} & \skillsetstyle{#2}
-  \\
+\newcommand*{\cvskill}[2]{%
+    \skilltypestyle{#1} & \skillsetstyle{#2}%
+  \\%
 }
 
 % Define an environment for cvitems(for cventry)
-\newenvironment{cvitems}{
-  \vspace{-4mm}
-  \begin{justify}
-  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
-    \setlength{\parskip}{0pt}
-    \renewcommand{\labelitemi}{\bullet}
-}{
-  \end{itemize}
-  \end{justify}
-  \vspace{-2mm}
+\newenvironment{cvitems}{%
+  \vspace{-4mm}%
+  \begin{justify}%
+  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]%
+    \setlength{\parskip}{0pt}%
+    \renewcommand{\labelitemi}{\bullet}%
+}{%
+  \end{itemize}%
+  \end{justify}%
+  \vspace{-2mm}%
 }
 
 
