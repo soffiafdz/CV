@@ -148,7 +148,8 @@
 \definecolor{awesome-nephritis}{HTML}{27AE60}
 \definecolor{awesome-concrete}{HTML}{95A5A6}
 \definecolor{awesome-darknight}{HTML}{131A28}
-\colorlet{awesome}{awesome-red}
+\definecolor{awesome-darkred}{HTML}{671a10}
+\colorlet{awesome}{awesome-darkred}
 
 % Awesome section color
 \newcounter{colorCounter}
@@ -234,7 +235,7 @@
 \newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{graytext} #1}}
 \newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
 \newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
-\newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\newcommand*{\descriptionstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of subentry
 \newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{graytext} #1}}
@@ -246,21 +247,23 @@
 % For elements of courses
 \newcommand*{\coursetitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\coursedatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
-\newcommand*{\courseinstructorstyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{awesome} #1}}
-\newcommand*{\courselocationstyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{text} #1}}
+\newcommand*{\courseinstructorstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{awesome} #1}}
+\newcommand*{\courselocationstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{text} #1}}
 \newcommand*{\coursecitystyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\newcommand*{\cdescriptionstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of proceedings
-\newcommand*{\proceedingtitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\color{darktext} #1}}
-\newcommand*{\proceedingtypestyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{graytext} (#1)}}
-\newcommand*{\proceedingdatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
-\newcommand*{\proceedingeventstyle}[1]{{\fontsize{7pt}{1em}\bodyfont\scshape\color{awesome} #1}}
-\newcommand*{\proceedinglocationstyle}[1]{{\fontsize{7pt}{1em}\bodyfontlight\color{text} #1}}
-\newcommand*{\proceedingcitystyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\newcommand*{\pubtitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\color{darktext} #1}}
+\newcommand*{\pubauthorstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\color{text} #1}}
+\newcommand*{\pubtypestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\scshape\color{awesome} (#1)}}
+\newcommand*{\pubdatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\color{graytext} #1}}
+\newcommand*{\pubeventstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\scshape\color{awesome} #1}}
+\newcommand*{\publocationstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\color{text} #1}}
+\newcommand*{\pubcitystyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 
 % For elements of honor
-\newcommand*{\honortitlestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\color{graytext} #1}}
-\newcommand*{\honorpositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\color{darktext} #1}}
+\newcommand*{\honortitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\color{graytext} #1}}
+\newcommand*{\honorpositionstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{darktext} #1}}
 \newcommand*{\honordatestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\color{graytext} #1}}
 \newcommand*{\honorlocationstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 
@@ -545,10 +548,10 @@
 \newcommand*{\cventry}[5]{%
   \setlength\tabcolsep{0pt}%
   \setlength{\extrarowheight}{0pt}%
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.5cm} R{4.5cm}}%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{13.5cm} R{3.5cm}}%
     \ifempty{#5}%
     {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\%
-    \entrypositionstyle{#1} & \entrydatestyle{#4} \\}%
+        \quad\entrypositionstyle{#1} & \entrydatestyle{#4} \\}%
     {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\[-0.70ex]%
         \quad\entrypositionstyle{#1} & \entrydatestyle{#4} \\[-0.40ex]%
     \multicolumn{2}{L{17cm}}{\descriptionstyle{#5}} \\[-1.0ex]}%
@@ -567,7 +570,7 @@
 \newcommand*{\cvsubentry}[4]{%
   \setlength\tabcolsep{0pt}%
   \setlength{\extrarowheight}{0pt}%
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{12.5cm} R{4.5cm}}%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{13.5cm} R{3.5cm}}%
     \setlength\leftskip{0.2cm}%
     \subentrytitlestyle{#2} & \ifthenelse{\equal{#1}{}}%
       {\subentrydatestyle{#3}}{}%
@@ -588,15 +591,23 @@
 }
 
 % Define an entry for courses
-% Usage: \cvcourse{<title>}{<instructor>}{<location>}{<city>}{<date>}
-\newcommand*{\cvcourse}[5]{%
+% Usage: \cvcourse{<title>}{<instructor>}{<location>}{<city>}{<date>}{<description>}
+\newcommand*{\cvcourse}[6]{%
     \setlength\tabcolsep{0pt}%
     \setlength{\extrarowheight}{0pt}%
     \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{14.0cm} R{3.0cm}}%
-        \coursetitlestyle{#1} & \coursecitystyle{#4} \\[-1ex]%
-        \ifempty{#2}%
-        {\quad}%
-        {\quad\courseinstructorstyle{#2}; }\courselocationstyle{#3} & \coursedatestyle{#5} \\%
+        \ifempty{#6}
+            {\coursetitlestyle{#1} & \coursecitystyle{#4} \\[-1ex]%
+                \ifempty{#2}%
+                    {\quad}%
+                    {\quad\courseinstructorstyle{#2}; }
+                \courselocationstyle{#3} & \coursedatestyle{#5}\\[-0.5ex]}%
+            {\coursetitlestyle{#1} & \coursecitystyle{#4} \\[-1ex]%
+                \ifempty{#2}%
+                    {\quad}%
+                    {\quad\courseinstructorstyle{#2}; }
+                \courselocationstyle{#3} & \coursedatestyle{#5}\\[-1ex]
+                \multicolumn{2}{L{17cm}}{\quad\cdescriptionstyle{#6}}\\[-0.6ex]}
     \end{tabular*}%
 }%
 %
@@ -609,36 +620,35 @@
 
 % Define an entry for proceeding
 % Usage: \cvproceeding{<type>}{<title>}{<event>}{<location>}{<city>}{<date>}
-% \renewcommand{\arraystretch}{0.5}
 \newcommand*{\cvproceeding}[6]{%
     \setlength\tabcolsep{0pt}\setlength{\extrarowheight}{0pt}%
-    \ifempty{#5#4#3}%
-        {%
-            \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{2.2cm} L{14.8cm}}%
-                \proceedingdatestyle{#6} & \multirow{2}{\hsize}{\hspace{-1em}\proceedingtitlestyle{#2}}\\[-1ex]%
-                \proceedingtypestyle{#1} &%
-                \\[0.75ex]%
-            \end{tabular*}%
-        }%
-        {%
-            \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{2.2cm} L{12.0cm} R{2.8cm}}%
-                \proceedingdatestyle{#6} & \proceedingtitlestyle{#2} & \multirow{2}{\hsize}{\hfill\proceedingcitystyle{#5}}\\[-1ex]%
-                \proceedingtypestyle{#1} &%
-                \ifempty{#3}%
-                    {\ifempty{#4}{}{\proceedinglocationstyle{#4}}}%
-                    {\ifempty{#4}{\proceedingeventstyle{#3}}{\proceedingeventstyle{#3; }%
-                    \proceedinglocationstyle{#4}}}\\%
-            \end{tabular*}%
-        }%
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{2.5cm} L{11.7cm} R{2.8cm}}%
+        \pubdatestyle{#6} & \pubtitlestyle{#2} & \multirow{2}{\hsize}{\hfill\pubcitystyle{#5}}\\[-1ex]%
+        \pubtypestyle{#1} &%
+        \ifempty{#3}%
+            {\ifempty{#4}{}{\publocationstyle{#4}}}%
+            {\ifempty{#4}{\pubeventstyle{#3}}{\pubeventstyle{#3; }%
+                \publocationstyle{#4}}}\\%
+    \end{tabular*}%
 }
 
+% Define an entry for Chapter
+% Usage: \cvchapt{<authorChap>}{<ChapTitle>}{<Editors>}{<Title>}{<Date>}{<City>}{<editorial>}
+\newcommand*{\cvchapt}[7]{%
+    \item {{\fontsize{8pt}{1em}\bodyfont\color{text} \pubauthorstyle{#1} (\pubdatestyle{#5}). \pubtitlestyle{#2} In \pubauthorstyle{#3} (Eds.), {\slshape{\pubtitlestyle{\color{awesome}#4}}}. \publocationstyle{#6}: \publocationstyle{#7}}}
+}
 
+% Define an entry for Poster
+% Usage: \cvposter{<authors>}{<title>}{<date>}{<city>}{<event>}{<location>}
+\newcommand*{\cvposter}[5]{%
+\item {{\fontsize{8pt}{1em}\bodyfont\color{text} \pubauthorstyle{#1} (\pubdatestyle{#3}). {\slshape{\pubtitlestyle{#2}}}. Poster session presented at the \pubeventstyle{#5}, \publocationstyle{#4}.}}
+}
 % Define an environment for cvhonor
 \newenvironment{cvhonors}{%
   \begin{center}%
     \setlength\tabcolsep{0pt}%
     \setlength{\extrarowheight}{0pt}%
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{1.5cm} L{12.0cm} R{3.5cm}}%
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} C{3.2cm} R{5cm}}%
 }{%
     \end{tabular*}%
   \end{center}%
@@ -647,33 +657,32 @@
 % Define a line of cv information(honor, award or something else)
 % Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
 \newcommand*{\cvhonor}[4]{%
-  \honordatestyle{#4} & \honorpositionstyle{#1}, \honortitlestyle{#2} & \honorlocationstyle{#3}%
-  \\%
+        \honordatestyle{#4} - \honorpositionstyle{#1} & \multirow{3}{\hsize}{\honortitlestyle{#2}\vfill}\\[-1ex]
+    \honorlocationstyle{#3} & \\[-0.5ex]
 }
-
 % Define an environment for cvskill
 \newenvironment{cvskills}{%
-  \begin{center}%
-    \setlength\tabcolsep{1ex}%
-    \setlength{\extrarowheight}{0pt}%
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{15.2cm}}%
-}{%
-    \end{tabular*}%
-  \end{center}%
+  \begin{center}
+    % \setlength\tabcolsep{1ex}
+    % \setlength{\extrarowheight}{0pt}
+%     \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{15.2cm}}
+}{
+%     \end{tabular*}
+  \end{center}
 }
 
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}
 \newcommand*{\cvskill}[2]{%
-    \skilltypestyle{#1} & \skillsetstyle{#2}%
-  \\%
+    \skilltypestyle{#1} \\
+    \skillsetstyle{#2}\\%
 }
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%
   \vspace{-4mm}%
   \begin{justify}%
-  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]%
+    \begin{itemize}[leftmargin=2ex, nosep, noitemsep]%
     \setlength{\parskip}{0pt}%
     \renewcommand{\labelitemi}{\bullet}%
 }{%
