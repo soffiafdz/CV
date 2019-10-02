@@ -674,7 +674,7 @@
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}
 \newcommand*{\cvskill}[2]{%
-    \skilltypestyle{#1} \\
+    \skilltypestyle{#1} \\[-0.5ex]%
     \skillsetstyle{#2}\\%
 }
 
