@@ -255,6 +255,7 @@
 % For elements of proceedings
 \newcommand*{\pubtitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\color{darktext} #1}}
 \newcommand*{\pubauthorstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\color{text} #1}}
+\newcommand*{\pubjournalstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\scshape\color{awesome} #1}}
 \newcommand*{\pubtypestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\scshape\color{awesome} (#1)}}
 \newcommand*{\pubdatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\color{graytext} #1}}
 \newcommand*{\pubeventstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\scshape\color{awesome} #1}}
@@ -630,6 +631,13 @@
             {\ifempty{#4}{\pubeventstyle{#3}}{\pubeventstyle{#3; }%
                 \publocationstyle{#4}}}\\%
     \end{tabular*}%
+}
+
+% Define an entry for Article
+% Usage: \cvarticle{<Authors>}{<Year>}{<Title>}{<Journal>}{<DOI>}
+\newcommand*{\cvarticle}[5]{%
+    \item {{\fontsize{8pt}{1em}\bodyfont\color{text} \pubauthorstyle{#1}
+      (\pubdatestyle{#2}). \pubtitlestyle{#3}. \pubjournalstyle{#4}. #5.}}
 }
 
 % Define an entry for Chapter
