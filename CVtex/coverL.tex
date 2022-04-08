@@ -18,7 +18,7 @@
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{awesome-cv2}
+\documentclass[11pt, letterpaper]{awesome-cv2}
 
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
@@ -41,12 +41,15 @@
 % \definecolor{lighttext}{HTML}{999999}
 
 % Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{true}
+\setbool{acvSectionColorHighlight}{false}
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
-
+\hypersetup{
+  colorlinks=true,
+  urlcolor=awesome-darkred
+}
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
 %	Comment any of the lines below if they are not required
@@ -54,47 +57,45 @@
 % Available options: circle|rectangle,edge/noedge,left/right
 % \photo[circle,noedge,left]{./examples/profile}
 \name{Sofía}{Fernández Lozano}
-\position{Psychology B.A.{\enskip\cdotp\enskip}Neurobiology M.S. (expected Jan. 20)}
+\position{Psychology B.A.{\enskip\cdotp\enskip}Neurobiology M.Sc.{\enskip\cdotp\enskip}Nerosciences PhD Student}
 % \address{42-8, Bangbae-ro 15-gil, Seocho-gu, Seoul, 00681, Rep. of KOREA}
 
-\mobile{(+55) 7671-2036}
-\email{soffiafdz@gmail.com}
+\mobile{(438) 506 2094}
+\email{sofia.fernandezlozano@mail.mcgill.ca}
 % \homepage{www.posquit0.com}
-\twitter{soffiafdz}
+% \twitter{soffiafdz}
 \github{soffiafdz}
 \linkedin{so1.618e}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
-\skype{ang.i291}
+% \skype{ang.i291}
 % \reddit{reddit-id}
 % \medium{madium-id}
 % \googlescholar{googlescholar-id}{name-to-display}
 %% \firstname and \lastname will be used
 % \googlescholar{googlescholar-id}{}
 % \extrainfo{extra informations}
-
-
-
 %-------------------------------------------------------------------------------
 %	LETTER INFORMATION
 %	All of the below lines must be filled out
 %-------------------------------------------------------------------------------
 % The company being applied to
-\recipient
-  {LAB}
-  {LAB \\ UNIV}
+\recipient{Production Unit}
+  {McGill Journal of Medicine\\
+    3655 Promenade Sir William Osler\\
+    Montreal, Quebec\\A
+    H3G 0B1}
 % The date on the letter, default is the date of compilation
 \letterdate{\today}
 % The title of the letter
-\lettertitle{Job Application for Software Engineer}
+\lettertitle{Job Application for Production Associate}
 % How the letter is opened
-\letteropening{Dear Mr./Ms./Dr. LastName,}
+\letteropening{}
 % How the letter is closed
 \letterclosing{Sincerely,}
 % Any enclosures with the letter
 \letterenclosure[Attached]{Curriculum Vitae}
-
 
 %-------------------------------------------------------------------------------
 \begin{document}
@@ -105,10 +106,7 @@
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
-\makecvfooter
-  {\today}
-  {}
-  {Sofía Fernández~~~·~~~Cover Letter}
+\makecvfooter{\today} {} {S.F.L.~~~·~~~Cover Letter}
 
 % Print the title with above letter informations
 \makelettertitle
@@ -119,13 +117,38 @@
 \begin{cvletter}
 
 \lettersection{About Me}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed tempor quam. Curabitur pharetra tincidunt tincidunt. Morbi volutpat feugiat mauris, quis tempor neque vehicula volutpat. Duis tristique justo vel massa fermentum accumsan. Mauris ante elit, feugiat vestibulum tempor eget, eleifend ac ipsum. Donec scelerisque lobortis ipsum eu vestibulum. Pellentesque vel massa at felis accumsan rhoncus.
+In High School, before deciding to pursue a career in Sciences, my interest in
+writing and arts led me to enroll in the professional track of Communications.
+Although I did not end up pursuing a career in journalism in the end, the training I had
+during those years has been extremely useful in my academic life helping me find
+the best ways to share my own research and results.
 
-\lettersection{Why Google?}
-Suspendisse commodo, massa eu congue tincidunt, elit mauris pellentesque orci, cursus tempor odio nisl euismod augue. Aliquam adipiscing nibh ut odio sodales et pulvinar tortor laoreet. Mauris a accumsan ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse vulputate sem vehicula ipsum varius nec tempus dui dapibus. Phasellus et est urna, ut auctor erat. Sed tincidunt odio id odio aliquam mattis. Donec sapien nulla, feugiat eget adipiscing sit amet, lacinia ut dolor. Phasellus tincidunt, leo a fringilla consectetur, felis diam aliquam urna, vitae aliquet lectus orci nec velit. Vivamus dapibus varius blandit.
+\lettersection{Why MJM?}
+Having experience with submitting manuscripts for publications, I am very
+attracted to the idea of gaining experience on the other side of scientific
+publishing, especially in a journal that is closely related to my own field of
+study. I would love the opportunity to collaborate in an environment
+surrounded by people who share my passion for science and its communication.
 
 \lettersection{Why Me?}
-Duis sit amet magna ante, at sodales diam. Aenean consectetur porta risus et sagittis. Ut interdum, enim varius pellentesque tincidunt, magna libero sodales tortor, ut fermentum nunc metus a ante. Vivamus odio leo, tincidunt eu luctus ut, sollicitudin sit amet metus. Nunc sed orci lectus. Ut sodales magna sed velit volutpat sit amet pulvinar diam venenatis.
+Through the years, during both my training in Communication and Life Sciences,
+I have developed a set of skills and interests that make me a perfect candidate
+for the job:
+\begin{itemize}
+  \item Pre-professional training in both journalism and typesetting.
+  \item Experience in Science communications.
+  \item Technical knowledge:
+    \begin{description}
+    \item[\LaTeX:] I wrote my Master's thesis using \LaTeX.
+      \href{https://github.com/soffiafdz/TesisINB}{Available online.}
+    \item[Web development:] For my lab, I have developed a full web
+      application using HTML and Javascript.
+      \href{https://github.com/soffiafdz/Qrater}{Available online.}
+    \end{description}
+\end{itemize}
+I sincerely believe I would make a valuable contribution to your Journal. I am
+eager to learn more about this position and I thank you warmly for your
+consideration.
 
 \end{cvletter}
 
