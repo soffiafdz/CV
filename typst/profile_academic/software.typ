@@ -24,7 +24,7 @@
   bullets: (
     [Adapted and trained a neural network for hippocampal and ventricular segmentation; benchmarked against existing methods.],
     [Validated robust associations with age and cognition across AD and PD cohorts.],
-    [Released network weights in a Docker image; published in _Human Brain Mapping_ (2025); primary biomarker in a submitted CIHR grant.],
+    [Released network weights in a Docker image; published in _Human Brain Mapping_ (2025); primary biomarker in an awarded CIHR grant.],
   ),
 )
 

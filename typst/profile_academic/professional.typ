@@ -8,7 +8,7 @@
   secondary: [Montréal, QC, Canada],
   quaternary: [Aug. 2020 – Present],
   bullets: (
-    [Developing and improving MRI tools to improve prediction of progression to Alzheimer's disease.],
+    [Developing and validating MRI tools to better predict progression to Alzheimer's disease.],
     [Developed a Quality Control web application that significantly improved the efficiency of the lab's QC processes.],
   ),
 )

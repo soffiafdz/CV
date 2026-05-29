@@ -64,6 +64,10 @@
   #_self & Collins, D.L. · _bioRxiv_ (2026). #_doi("10.64898/2026.04.13.718285") \
   #_ri[Conceived the research question, derived the sex-specific normative GAMLSS references, planned and executed the analyses, drafted the manuscript.][Establishes HVR as a head-size-independent biomarker with sex-specific norms, revealing atrophy patterns invisible to raw hippocampal volume.]
 
+- *Cardiovascular risk and hippocampal-cognitive coupling in Alzheimer's disease.* \
+  #_self, Villeneuve, S., Collins, D.L., et al. · _bioRxiv_ 728251 (2026). #sc[Under screening] \
+  #_ri[Conceived the CVR#sub[mimic] age-adjustment framework, built all MIMIC and LGCM mediation models, planned and executed the analyses, drafted the manuscript.][Shows Framingham Risk Score associations with hippocampal-cognitive decline largely reflect age confounding; isolates genuine vascular effects in amyloid-negative, cognitively unimpaired individuals.]
+
 #subsection("Conference Publications")
 
 #set list(spacing: 6pt, indent: 6pt, marker: text(fill: muted)[•])
