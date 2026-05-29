@@ -1,1 +1,11 @@
-inspirationCVs
+inspirationCVs/
+
+# Generated CV outputs
+build/
+
+# Raw personal source documents — not part of the repo
+Sources/
+Examples/
+
+# Harness / editor state
+.claude/

@@ -1,0 +1,37 @@
+# Profile: artist. Creative-forward CV for the writer/photographer
+# identity, under the pen name "Elena Jacobo" attached to the legal name.
+#
+# This profile is currently a stub — `modules = []` means the CV compiles
+# to header-only. Add content modules (creative.typ, exhibitions.typ,
+# publications.typ, talks.typ, etc.) when ready, then list them in the
+# `modules` array below.
+#
+# Compile:
+#     typst compile cv.typ     --input profile=artist
+#     typst compile letter.typ --input profile=artist
+
+# Italic tagline shown directly under the name. The pen name is part of
+# the artist identity, so it lives here as the role tagline.
+header_quote = "writing as Elena Jacobo"
+
+cv_footer     = "Curriculum Vitae"
+letter_footer = "Cover Letter"
+
+updated = "May 2026"
+
+# Add content modules here as you build them out (each name maps to a
+# sibling .typ file). Example:
+#   modules = ["creative", "exhibitions", "publications", "talks", "education"]
+modules = []
+
+[layout]
+    paper_size = "us-letter"
+
+[personal]
+    first_name = "Sofía"
+    last_name  = "Fernández Lozano"
+
+    [personal.info]
+        phone    = "+1 438 506 2094"
+        email    = "sofia.fernandezlozano@mail.mcgill.ca"
+        location = "Montréal, QC, Canada"
