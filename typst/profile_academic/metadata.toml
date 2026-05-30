@@ -13,8 +13,9 @@
 # To create a new profile, copy this directory to profile_<name>/ and
 # edit the fields below.
 
-# Italic tagline shown directly under the name in the header.
-header_quote = "PhD Candidate, Neurosciences"
+# Italic tagline shown directly under the name in the header. Empty = omit
+# (a tagline reads as résumé styling; a CV lets the content speak).
+header_quote = ""
 
 # Short label shown in the page footer.
 cv_footer     = "Curriculum Vitae"
@@ -26,7 +27,7 @@ updated = "May 2026"
 # Section render order. Each entry maps to a sibling file:
 # `professional` → professional.typ, etc. Re-order, add, or remove to
 # change which sections appear.
-modules = ["profile", "professional", "education", "skills", "teaching", "software", "honours", "courses", "publications"]
+modules = ["profile", "education", "research", "clinical", "community", "publications", "honours", "teaching", "software", "skills", "courses"]
 
 [layout]
     # Page size. Possible values: "a4", "us-letter".

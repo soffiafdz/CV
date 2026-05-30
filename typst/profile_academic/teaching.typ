@@ -1,10 +1,9 @@
 #import "../lib.typ": *
 
-// Teaching & Mentoring section. Two entry blocks:
-//   1. Methodological supervision of PhD students inside the lab.
-//   2. Invited workshops and lectures (peer labs, courses, external).
+// Teaching & Service. Methodological supervision, invited workshops/
+// lectures, and editorial service (McGill Journal of Medicine).
 
-#section("Teaching & Mentoring")
+#section("Teaching & Service")
 
 #entry(
   primary: [Methodological Supervision — PhD Students],
@@ -23,5 +22,15 @@
     [_SEM & mediation methodology workshops_ delivered for the Mahsa Dadar and Yashar Zeighami labs, McGill University (2024–2025).],
     [_R introductory session_ for graduate students in the PSYT630 statistics course taught by Yashar Zeighami, McGill University (2024).],
     [_Graph Theory Analyses with R and BrainGraph_ — invited graduate lecturer in Eduardo Garza-Villarreal's "Redes y Conectividad Cerebral y Neuroimagen" course, UNAM (Nov 2021).],
+  ),
+)
+
+#entry(
+  primary: [McGill Journal of Medicine],
+  tertiary: [Production Editor],
+  secondary: [Montréal, QC, Canada],
+  quaternary: [May 2022 – Jul. 2024],
+  bullets: (
+    [Managed a team of production associates preparing PDF and HTML galleys for online publication.],
   ),
 )

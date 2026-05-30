@@ -24,33 +24,37 @@
 #let _doi(d) = link("https://doi.org/" + d, text(size: 8.5pt, fill: muted)[doi:#d])
 #let _en(t) = text(size: 9pt, fill: muted, style: "italic")[(#t)]
 
-// Role & impact line, required by funders for multi-authored publications.
-// Compact muted third line under the citation; labels in the section accent.
-#let _ri(role, impact) = text(size: 8.5pt, fill: muted)[
-  #text(fill: accent, weight: "bold")[Role.] #role #h(0.4em)
-  #text(fill: accent, weight: "bold")[Impact.] #impact
+// Role & impact note, required by funders for multi-authored publications.
+// Rendered as an indented sub-note under the citation so it reads as
+// subordinate to (not co-equal with) the entry it annotates: smaller text,
+// hanging-indented past the bullet, tight to the citation above.
+#let _ri(role, impact) = block(above: 2pt, inset: (left: 10pt))[
+  #text(size: 8pt, fill: muted)[
+    #text(fill: accent, weight: "bold")[Role.] #role #h(0.4em)
+    #text(fill: accent, weight: "bold")[Impact.] #impact
+  ]
 ]
 
 #section("Publications")
 
 #subsection("Articles & Book Chapter")
 
-#set list(spacing: 6pt, indent: 6pt, marker: text(fill: muted)[•])
+#set list(spacing: 7pt, indent: 6pt, marker: text(fill: muted)[•])
 
 - *Enhanced Detection of Age-Related and Cognitive Declines Using Automated Hippocampal-To-Ventricle Ratio in Alzheimer's Patients.* \
-  #_self, et al. · _Human Brain Mapping_ 46(11) (2025). #_doi("10.1002/hbm.70265") \
+  #_self, et al. · _Human Brain Mapping_ 46(11) (2025). #_doi("10.1002/hbm.70265")
   #_ri[Designed and validated the deep-learning segmentation pipeline, conceived and executed the analyses, released the Docker image, drafted the manuscript.][Converts a labour-intensive manual biomarker into an automated, scalable tool validated across AD and PD cohorts.]
 
 - *QRATER: a collaborative and centralized imaging quality control web-based application.* \
-  #_self, et al. · _Aperture Neuro_ 4 (2024). #_doi("10.52294/001c.118616") \
+  #_self, et al. · _Aperture Neuro_ 4 (2024). #_doi("10.52294/001c.118616")
   #_ri[Conceived, designed, and programmed the application; led QC training and the ADNI QC effort; drafted the manuscript.][Open-source tool adopted across multiple labs; 250K+ images processed; 2–10× faster than conventional QC.]
 
 - *Clinical and functional connectivity outcomes of 5-Hz repetitive transcranial magnetic stimulation as an add-on treatment in cocaine use disorder: a double-blind randomized controlled trial.* \
-  Garza-Villarreal, E.A., Alcala-Lozano, R., #_self, et al. · _Biological Psychiatry: Cognitive Neuroscience and Neuroimaging_ 6(7), 745–757 (2021). #_doi("10.1016/j.bpsc.2021.01.003") \
+  Garza-Villarreal, E.A., Alcala-Lozano, R., #_self, et al. · _Biological Psychiatry: Cognitive Neuroscience and Neuroimaging_ 6(7), 745–757 (2021). #_doi("10.1016/j.bpsc.2021.01.003")
   #_ri[Co-author — administered rTMS treatments, supervised MRI acquisition and safety, performed the fMRI connectivity analyses.][First double-blind RCT of rTMS for cocaine use disorder in a Latin-American population.]
 
 - *Gray and white matter morphology in substance use disorders: a neuroimaging systematic review and meta-analysis.* \
-  Pando-Naude, V., Toxto, S., #_self, et al. · _Translational Psychiatry_ 11(1), 29 (2021). #_doi("10.1038/s41398-020-01128-2") \
+  Pando-Naude, V., Toxto, S., #_self, et al. · _Translational Psychiatry_ 11(1), 29 (2021). #_doi("10.1038/s41398-020-01128-2")
   #_ri[Co-author — parsed and catalogued the included studies; contributed to manuscript review.][Systematic review and meta-analysis of gray- and white-matter morphology across substance use disorders.]
 
 - *_Derechos sexuales y reproductivos; reflexiones para terapeutas_ #_en[Sexual and reproductive rights; reflections for therapists].* \
@@ -58,43 +62,51 @@
 
 #subsection("Preprints")
 
-#set list(spacing: 6pt, indent: 6pt, marker: text(fill: muted)[•])
+#set list(spacing: 7pt, indent: 6pt, marker: text(fill: muted)[•])
 
 - *Hippocampal-to-ventricle ratio as a head-size-independent biomarker: sex differences and cognitive associations in 27,680 UK Biobank participants.* \
-  #_self & Collins, D.L. · _bioRxiv_ (2026). #_doi("10.64898/2026.04.13.718285") \
+  #_self & Collins, D.L. · _bioRxiv_ (2026). #_doi("10.64898/2026.04.13.718285")
   #_ri[Conceived the research question, derived the sex-specific normative GAMLSS references, planned and executed the analyses, drafted the manuscript.][Establishes HVR as a head-size-independent biomarker with sex-specific norms, revealing atrophy patterns invisible to raw hippocampal volume.]
 
 - *Cardiovascular risk and hippocampal-cognitive coupling in Alzheimer's disease.* \
-  #_self, Villeneuve, S., Collins, D.L., et al. · _bioRxiv_ 728251 (2026). #sc[Under screening] \
+  #_self, Villeneuve, S., Collins, D.L., et al. · _bioRxiv_ 728251 (2026). #sc[Under screening]
   #_ri[Conceived the CVR#sub[mimic] age-adjustment framework, built all MIMIC and LGCM mediation models, planned and executed the analyses, drafted the manuscript.][Shows Framingham Risk Score associations with hippocampal-cognitive decline largely reflect age confounding; isolates genuine vascular effects in amyloid-negative, cognitively unimpaired individuals.]
 
 #subsection("Conference Publications")
 
-#set list(spacing: 6pt, indent: 6pt, marker: text(fill: muted)[•])
+#set list(spacing: 7pt, indent: 6pt, marker: text(fill: muted)[•])
 
 - *The Role of Negative Space: Lateral Ventricular Expansion Is a Better Correlate of Cognition Than Hippocampal Volume.* \
-  #_self, et al. · _Alzheimer's & Dementia_ 21(S2):e106003 (2026). _AAIC,_ Toronto, Canada · Jul 2025. #_doi("10.1002/alz70856_106003") \
+  #_self, et al. · _Alzheimer's & Dementia_ 21(S2):e106003 (2026). _AAIC,_ Toronto, Canada · Jul 2025. #_doi("10.1002/alz70856_106003")
   #_ri[Conceived the research question, planned and executed the analyses, designed the poster.][Lateral ventricular expansion is a stronger cognitive correlate than hippocampal volume across the AD continuum.]
 
 - *Tau accumulation mediates β-amyloid effects on hippocampal atrophy and memory in early Alzheimer's disease.* \
-  #_self, et al. · _Alzheimer's & Dementia_ 20:e092651 (2024). _AAIC,_ Philadelphia, PA, USA · Jul 2024. #_doi("10.1002/alz.092651") \
+  #_self, et al. · _Alzheimer's & Dementia_ 20:e092651 (2024). _AAIC,_ Philadelphia, PA, USA · Jul 2024. #_doi("10.1002/alz.092651")
   #_ri[Conceived the research question, built the SEM mediation models, planned and executed the analyses, designed the poster.][Links amyloid, tau, and hippocampal atrophy through tau-mediation in ADNI PET data.]
 
 - *Hippocampal-to-ventricle ratio (HVR) is better related to age and cognition than hippocampal volume.* \
-  #_self, et al. · _Alzheimer's & Dementia_ (2023). _AAIC,_ Amsterdam, Netherlands · Aug 2023. #_doi("10.1002/alz.079039") \
+  #_self, et al. · _Alzheimer's & Dementia_ (2023). _AAIC,_ Amsterdam, Netherlands · Aug 2023. #_doi("10.1002/alz.079039")
   #_ri[Conceived the research question, planned and executed the analyses, designed the poster.][Demonstrates HVR tracks age and cognition more closely than hippocampal volume.]
 
 - *Do we really need to normalize hippocampal volume?* \
-  #_self, et al. · _Alzheimer's & Dementia_ (2023). _AAIC,_ Amsterdam, Netherlands · Aug 2023. #_doi("10.1002/alz.077928") \
+  #_self, et al. · _Alzheimer's & Dementia_ (2023). _AAIC,_ Amsterdam, Netherlands · Aug 2023. #_doi("10.1002/alz.077928")
   #_ri[Conceived the research question, planned and executed the analyses, designed the poster.][Questions whether hippocampal volume requires head-size normalization.]
 
 - *Qrater: collaborative imaging quality control tool.* \
-  #_self, et al. · _Alzheimer's & Dementia_ 18:e065184 (2022). _Alzheimer's Imaging Consortium,_ San Diego, CA, USA · Jul 2022. #_doi("10.1002/alz.065184") \
+  #_self, et al. · _Alzheimer's & Dementia_ 18:e065184 (2022). _Alzheimer's Imaging Consortium,_ San Diego, CA, USA · Jul 2022. #_doi("10.1002/alz.065184")
   #_ri[Designed and presented the poster.][First public dissemination of Qrater to the AD imaging community.]
 
-#subsection("Poster Presentations")
+#subsection("Presentations")
 
-#set list(spacing: 6pt, indent: 6pt, marker: text(fill: muted)[•])
+// Lighter sub-label nesting Posters / Oral talks under "Presentations"
+// (one tier below the accent subsection: smaller, italic, muted).
+#let _grp(t) = block(above: 6pt, below: 3pt, sticky: true)[
+  #text(size: 10pt, weight: "medium", style: "italic", fill: muted)[#t]
+]
+
+#_grp[Posters]
+
+#set list(spacing: 7pt, indent: 6pt, marker: text(fill: muted)[•])
 
 - *Hippocampus-to-Ventricle Ratio Reveals Steeper Age-related Neurodegeneration in Parkinson's Disease Compared to Controls.* \
   _AD/PD 2025,_ Vienna, Austria · Apr 2025.
@@ -108,9 +120,9 @@
 - *Effects of rTMS on the small-worldness of crack-cocaine addicts' functional connectivity networks.* \
   _XX Reunion of Neuroimage at CIMAT,_ Guanajuato, México · Oct 2018.
 
-#subsection("Oral Talks")
+#_grp[Oral talks]
 
-#set list(spacing: 6pt, indent: 6pt, marker: text(fill: muted)[•])
+#set list(spacing: 7pt, indent: 6pt, marker: text(fill: muted)[•])
 
 - *Hippocampal-to-Ventricle Ratio is a Viable Neurodegeneration Biomarker for Evaluating the Longitudinal Progression of Cognitive Decline in the Context of Alzheimer's Disease.* \
   #sc[OnDemand oral talk] · AD/PD 2025, Vienna, Austria · Apr 2025.

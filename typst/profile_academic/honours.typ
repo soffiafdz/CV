@@ -4,13 +4,18 @@
 // muted metadata right. Each honour is a list item with minimal data
 // (name + amount + location + year), so a 2-line format would be bloat.
 
-#section("Honours & Grants")
+#section("Honours & Awards")
 
 #subsection("Fellowships & Awards")
 
 #one-line(
   [CONACYT Graduate Fellowship #amount[(≈19K CAD)]],
   [Ciudad de México, México · 2017–2019],
+)
+
+#one-line(
+  [Differential Fee Waiver, McGill IPN #amount[(≈14K CAD/yr)]],
+  [Montréal, QC, Canada · 2020–2023],
 )
 
 #one-line(
