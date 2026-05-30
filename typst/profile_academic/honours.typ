@@ -9,11 +9,6 @@
 #subsection("Fellowships & Awards")
 
 #one-line(
-  [CONACYT Graduate Fellowship #amount[(≈19K CAD)]],
-  [Ciudad de México, México · 2017–2019],
-)
-
-#one-line(
   [Differential Fee Waiver, McGill IPN #amount[(≈14K CAD/yr)]],
   [Montréal, QC, Canada · 2020–2023],
 )
@@ -24,12 +19,17 @@
 )
 
 #one-line(
-  [CONACYT Mobility Fellowship #amount[(≈1.9K CAD)]],
-  [Ciudad de México, México · 2019],
+  [CONACYT Graduate Fellowship #amount[(≈19K CAD)]],
+  [Ciudad de México, México · 2017–2019],
 )
 
 #one-line(
   [UNAM Support for Mobility #amount[(≈1.3K CAD)]],
+  [Ciudad de México, México · 2019],
+)
+
+#one-line(
+  [CONACYT Mobility Fellowship #amount[(≈1.9K CAD)]],
   [Ciudad de México, México · 2019],
 )
 
