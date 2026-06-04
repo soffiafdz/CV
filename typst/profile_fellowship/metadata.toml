@@ -1,0 +1,27 @@
+# Profile: fellowship. Curated CV for creative-writing fellowships
+# (built for the TSC Transgenre call): creative work foregrounded,
+# research condensed to summary lines, clinical + advocacy included.
+#
+# Compile:
+#     typst compile cv.typ --input profile=fellowship
+
+header_quote = ""
+
+cv_footer     = "Curriculum Vitae"
+letter_footer = "Cover Letter"
+
+updated = "June 2026"
+
+modules = ["profile", "creative", "education", "research", "clinical", "community"]
+
+[layout]
+    paper_size = "us-letter"
+
+[personal]
+    first_name = "Sofía"
+    last_name  = "Fernández Lozano"
+
+    [personal.info]
+        email    = "sofia.fernandezlozano@mail.mcgill.ca"
+        phone    = "+1 (438) 506-2094"
+        location = "Montréal, QC, Canada"

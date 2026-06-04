@@ -23,6 +23,10 @@ cv-artist:
     mkdir -p {{build_dir}}
     typst compile cv.typ {{build_dir}}/cv-artist.pdf --input profile=artist
 
+cv-fellowship:
+    mkdir -p {{build_dir}}
+    typst compile cv.typ {{build_dir}}/cv-fellowship.pdf --input profile=fellowship
+
 watch-cv-academic:
     mkdir -p {{build_dir}}
     typst watch cv.typ {{build_dir}}/cv-academic.pdf --input profile=academic
