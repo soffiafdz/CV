@@ -69,7 +69,7 @@
   #_ri[Conceived the research question, derived the sex-specific normative GAMLSS references, planned and executed the analyses, drafted the manuscript.][Establishes HVR as a head-size-independent biomarker with sex-specific norms, revealing atrophy patterns invisible to raw hippocampal volume.]
 
 - *Cardiovascular risk and hippocampal-cognitive coupling in Alzheimer's disease.* \
-  #_self, Villeneuve, S., Collins, D.L., et al. · _bioRxiv_ 728251 (2026). #sc[Under screening]
+  #_self, Villeneuve, S., Collins, D.L., et al. · _medRxiv_ (2026). #_doi("10.64898/2026.06.01.26354601")
   #_ri[Conceived the CVR#sub[mimic] age-adjustment framework, built all MIMIC and LGCM mediation models, planned and executed the analyses, drafted the manuscript.][Shows Framingham Risk Score associations with hippocampal-cognitive decline largely reflect age confounding; isolates genuine vascular effects in amyloid-negative, cognitively unimpaired individuals.]
 
 #subsection("Conference Publications")
@@ -108,7 +108,7 @@
 
 #set list(spacing: 7pt, indent: 6pt, marker: text(fill: muted)[•])
 
-- *Hippocampus-to-Ventricle Ratio Reveals Steeper Age-related Neurodegeneration in Parkinson's Disease Compared to Controls.* \
+- *Hippocampal-to-Ventricle Ratio Reveals Steeper Age-related Neurodegeneration in Parkinson's Disease Compared to Controls.* \
   _AD/PD 2025,_ Vienna, Austria · Apr 2025.
 
 - *Qrater: centralized web application for image quality control.* \
@@ -125,7 +125,7 @@
 #set list(spacing: 7pt, indent: 6pt, marker: text(fill: muted)[•])
 
 - *Hippocampal-to-Ventricle Ratio is a Viable Neurodegeneration Biomarker for Evaluating the Longitudinal Progression of Cognitive Decline in the Context of Alzheimer's Disease.* \
-  #sc[OnDemand oral talk] · AD/PD 2025, Vienna, Austria · Apr 2025.
+  #sc[On-Demand oral talk] · AD/PD 2025, Vienna, Austria · Apr 2025.
 
 - *Estimulación Magnética Transcraneal: técnicas de neuromodulación como tratamiento neuropsiquiátrico #_en[Transcranial Magnetic Stimulation: Neuromodulation techniques as a neuropsychiatric treatment].* \
   #sc[Invited talk] · Monthly Seminar, Baja California College of Psychologists, Tijuana, BC, México · Dec 2019.
