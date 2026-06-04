@@ -9,3 +9,6 @@ Examples/
 
 # Harness / editor state
 .claude/
+
+# Application calls / source documents
+*.pdf
