@@ -73,6 +73,8 @@
   github:   v => box[#fa-square-github() #h(3pt) #link("https://github.com/" + v)[#v]],
   linkedin: v => box[#fa-linkedin()      #h(3pt) #link("https://linkedin.com/in/" + v)[#v]],
   orcid:    v => box[#fa-orcid()         #h(3pt) #link("https://orcid.org/" + v)[#v]],
+  website:  v => box[#fa-globe()         #h(3pt) #link("https://" + v)[#v]],
+  portfolio: v => box[#fa-feather()      #h(3pt) #link("https://" + v)[#v]],
   scholar:  v => box[#fa-graduation-cap() #h(3pt) #link("https://scholar.google.com/citations?user=" + v)[Google Scholar]],
   location: v => box[#fa-location-dot()  #h(3pt) #v],
 )
@@ -87,9 +89,12 @@
 
   // Build the contact row by iterating info in key-insertion order. Skip
   // keys we don't have a renderer for (e.g. "custom-position", "address").
+  // A `newline = ""` key breaks the contact line in two at that point.
   let items = ()
   for (key, value) in info {
-    if key in _contact-renderers {
+    if key == "newline" {
+      items.push(linebreak())
+    } else if key in _contact-renderers {
       items.push((_contact-renderers.at(key))(value))
     }
   }
@@ -108,9 +113,16 @@
     #v(-1pt)
     #text(size: 9pt, fill: muted)[#{
       let result = ()
-      for (i, item) in items.enumerate() {
-        if i > 0 { result.push(dot) }
-        result.push(item)
+      let after-break = true
+      for item in items {
+        if item == linebreak() {
+          result.push(item)
+          after-break = true
+        } else {
+          if not after-break { result.push(dot) }
+          result.push(item)
+          after-break = false
+        }
       }
       result.join()
     }]
@@ -121,8 +133,8 @@
 //
 // First-N-letters in accent + trailing rule (also accent). The colored rule
 // repeats at every section as the document's signature horizontal element.
-#let section(title, accent-letters: 2) = {
-  v(14pt, weak: true)
+#let section(title, accent-letters: 2, above: 14pt) = {
+  v(above, weak: true)
   block(below: 6pt, sticky: true)[
     #let head = title.slice(0, calc.min(accent-letters, title.len()))
     #let tail = title.slice(calc.min(accent-letters, title.len()))

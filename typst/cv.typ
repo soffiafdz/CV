@@ -30,7 +30,9 @@
 )
 
 #set text(font: body-font, size: 10pt, fill: body-color)
-#set par(leading: 0.55em)
+// Line leading in em, overridable per profile ([layout] leading = 0.5
+// tightens a dense single-page profile without touching content).
+#set par(leading: metadata.layout.at("leading", default: 0.55) * 1em)
 
 // === Header =================================================================
 #header(metadata.personal, tagline: metadata.at("header_quote", default: ""))

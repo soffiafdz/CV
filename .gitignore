@@ -12,3 +12,6 @@ Examples/
 
 # Application calls / source documents
 *.pdf
+
+# Browser-session artifacts (site reviews)
+.playwright-mcp/

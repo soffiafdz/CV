@@ -1,31 +1,36 @@
 #import "../lib.typ": *
 
-// Creative work leads this CV. Novel first (it is what the fellowship
-// would support), photography second.
+// Creative work leads. Tight, scannable entries: what it is, the formal
+// facts that matter, the credits. Depth belongs to the statement and
+// the portfolio, not the CV.
 
 #section("Creative Work")
 
+// Pen name disclosed plainly: the committee needs the legal name for
+// academics/immigration and the pen name to read the portfolio (whose
+// URL now lives in the header contact line).
+#block(above: 4pt, below: 2pt)[
+  #text(size: 9.5pt)[Writing and photography appear under the pen name *Elena Jacobo*.]
+]
+
 #entry(
-  primary: [_Palimpsesto_ — novel],
-  tertiary: [Autofiction · 82 chapters in five parts · ≈340 pages],
-  quaternary: [draft complete · in revision],
+  primary: [_Palimpsesto_],
+  tertiary: [Novel · Autofiction · draft complete, in revision],
   bullets: (
-    [A year, November to October, in chapters titled "_[Date], or [Title]_", moving through parts named _Percepción, Connexion, Reflexión, Ausencia_, and an epilogue; undated chapters — poems, vignettes, flashbacks — interleave outside the calendar.],
-    [Narrated in English with its Spanish and French left untranslated; distilled from a decade of daily journals — the palimpsest as method, not only title.],
-    // The Dalloway / L'Esprit credits below are fine on this private
-    // application CV; do NOT propagate to the public website until the
-    // results and the issue are public (author's instruction).
-    [_Azules_, an adaptation of three chapters, was shortlisted for the 2026 Clarissa Dalloway Prize in Short Prose and is forthcoming in _L'Esprit Literary Review_ (October 2026).],
-    [Four further chapter adaptations are currently in submission to literary magazines.],
+    [A year, November to October, told in chapters titled "_[Date], or [Title]_" and moving through four parts and an epilogue: _Percepción, Connexion, Reflexión, Ausencia_. Poems, vignettes, and flashbacks interleave outside the calendar.],
+    [Narrated in English with its Spanish and French left untranslated; distilled from a decade of daily journals. The palimpsest is the method, not only the title.],
+    // Dalloway / L'Esprit: fine on this private application CV; do NOT
+    // propagate to the public website until results/issue are public.
+    // Adaptation title deliberately omitted (author's instruction): the
+    // shortlisted piece should not be identifiable as the writing sample.
+    [A short story adapted from three of its chapters was shortlisted for the 2026 Clarissa Dalloway Prize in Short Prose and is forthcoming in _L'Esprit Literary Review_. Another short story and three poems drawn from the novel are under consideration at literary magazines.],
   ),
 )
 
 #entry(
   primary: [Photography],
-  tertiary: [Digital & analog · 17 series],
-  quaternary: [ongoing],
+  tertiary: [Digital & analog photography · ongoing],
   bullets: (
-    [Street and documentary work circling memory and observation: strangers' lives photographed without being noticed, walls that peel and get overwritten, border landscapes.],
-    [_Sujeto/Yo_ (2025) — ten 120mm self-portraits from a single roll, one midnight, each titled in Spanish, English, and French — three titles, not translations. A quiet, private dance on the liminal space behind and in front of the lens.],
+    [_Sujeto/Yo_ (2025): a self-portrait series of ten photographs on a single 120mm roll, taken on a single midnight. Each frame carries three titles, in Spanish, English, and French, titles rather than translations, with a short poetic text; the gaze turned, for once, on myself.],
   ),
 )

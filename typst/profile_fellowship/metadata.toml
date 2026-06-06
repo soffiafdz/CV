@@ -5,14 +5,17 @@
 # Compile:
 #     typst compile cv.typ --input profile=fellowship
 
-header_quote = ""
+# Byline: writer first — this CV answers a writing call.
+header_quote = "Writer · Photographer · PhD in Neurosciences"
 
 cv_footer     = "Curriculum Vitae"
 letter_footer = "Cover Letter"
 
 updated = "June 2026"
 
-modules = ["profile", "creative", "education", "research", "clinical", "community"]
+# Two deliberate pages: page 1 the writer (profile, creative, advocacy),
+# page 2 the scientist-clinician (research, clinical, education).
+modules = ["profile", "creative", "community", "research", "workshops", "clinical", "education"]
 
 [layout]
     paper_size = "us-letter"
@@ -21,7 +24,12 @@ modules = ["profile", "creative", "education", "research", "clinical", "communit
     first_name = "Sofía"
     last_name  = "Fernández Lozano"
 
+    # Two contact lines: the person (email, location), then the work
+    # (academic site, portfolio). Phone omitted: the application form
+    # collects it, and nobody cold-calls an international applicant.
     [personal.info]
-        email    = "sofia.fernandezlozano@mail.mcgill.ca"
-        phone    = "+1 (438) 506-2094"
-        location = "Montréal, QC, Canada"
+        email     = "sofia.fdzl@pm.me"
+        location  = "Montréal, QC, Canada"
+        newline   = ""
+        website   = "sofiafdzl.com"
+        portfolio = "elenajacobo.com"

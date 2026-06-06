@@ -1,7 +1,9 @@
 #import "../lib.typ": *
 
-// One condensed entry. Output as summary lines, not itemized lists —
-// this CV answers a writing call, not a research rubric.
+// Page 2 opens here: the scientist-clinician record. One condensed
+// entry; this CV answers a writing call, not a research rubric.
+
+#pagebreak(weak: true)
 
 #section("Research")
 
@@ -12,6 +14,6 @@
   quaternary: [2020 – 2026],
   bullets: (
     [Developed and validated MRI biomarkers of hippocampal degeneration tracking memory and cognitive decline in Alzheimer's and Parkinson's disease.],
-    [4 peer-reviewed manuscripts (2 first-author); 2 first-authored manuscripts in submission; 8 poster and oral presentations at international conferences (AAIC, AD/PD, OHBM).],
+    [Multiple first-author publications in peer-reviewed journals, with further first-authored manuscripts under review; regular poster and oral presentations at international conferences.],
   ),
 )

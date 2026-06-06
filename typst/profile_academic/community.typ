@@ -35,6 +35,6 @@
   secondary: [Tijuana, BC, México],
   quaternary: [Jan. – Jul. 2017],
   bullets: (
-    [Designed and implemented workshops for the transgender women community of Baja California.],
+    [Designed and implemented empowerment workshops for the transgender women community of Baja California.],
   ),
 )

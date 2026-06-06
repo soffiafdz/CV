@@ -3,7 +3,7 @@
 #section("Education")
 
 #entry(
-  primary: [PhD in Neurosciences],
+  primary: [PhD in Neurosciences — Defended June 2026],
   tertiary: [Montreal Neurological Institute & McGill University],
   secondary: [Montréal, QC, Canada],
   quaternary: [2020 – 2026],
@@ -11,7 +11,7 @@
 
 #entry(
   primary: [MSc in Neurobiology — Graduated with Honors],
-  tertiary: [Universidad Nacional Autónoma de México (UNAM)],
+  tertiary: [Instituto Nacional de Psiquiatría "Ramón de la Fuente Muñiz" & Universidad Nacional Autónoma de México (UNAM)],
   secondary: [Ciudad de México, México],
   quaternary: [2017 – 2020],
 )
