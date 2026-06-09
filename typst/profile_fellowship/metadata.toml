@@ -15,7 +15,7 @@ updated = "June 2026"
 
 # Two deliberate pages: page 1 the writer (profile, creative, advocacy),
 # page 2 the scientist-clinician (research, clinical, education).
-modules = ["profile", "creative", "community", "research", "workshops", "clinical", "education"]
+modules = ["profile", "creative", "community", "research", "workshops", "clinical", "education", "languages"]
 
 [layout]
     paper_size = "us-letter"
@@ -24,12 +24,10 @@ modules = ["profile", "creative", "community", "research", "workshops", "clinica
     first_name = "Sofía"
     last_name  = "Fernández Lozano"
 
-    # Two contact lines: the person (email, location), then the work
-    # (academic site, portfolio). Phone omitted: the application form
-    # collects it, and nobody cold-calls an international applicant.
+    # Single contact line, four items: email, both sites, location.
+    # One line keeps the header a clean pyramid (name → byline → contact).
     [personal.info]
         email     = "sofia.fdzl@pm.me"
-        location  = "Montréal, QC, Canada"
-        newline   = ""
         website   = "sofiafdzl.com"
         portfolio = "elenajacobo.com"
+        location  = "Montréal, QC, Canada"

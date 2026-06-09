@@ -17,3 +17,13 @@
     [Multiple first-author publications in peer-reviewed journals, with further first-authored manuscripts under review; regular poster and oral presentations at international conferences.],
   ),
 )
+
+#entry(
+  primary: [Addiction & Neuromodulation — Instituto Nacional de Psiquiatría "Ramón de la Fuente Muñiz"],
+  tertiary: [Master's Student Researcher],
+  secondary: [Ciudad de México, México],
+  quaternary: [2017 – 2019],
+  bullets: (
+    [Administered treatments and supervised MRI acquisition in a double-blind randomized clinical trial of rTMS with cocaine-dependent patients.],
+  ),
+)

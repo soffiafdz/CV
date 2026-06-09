@@ -11,7 +11,7 @@
 
 #entry(
   primary: [MSc in Neurobiology — Graduated with Honors],
-  tertiary: [Instituto Nacional de Psiquiatría "Ramón de la Fuente Muñiz" & Universidad Nacional Autónoma de México (UNAM)],
+  tertiary: [Instituto Nacional de Psiquiatría "Ramón de la Fuente Muñiz" & Universidad Nacional Autónoma de México],
   secondary: [Ciudad de México, México],
   quaternary: [2017 – 2020],
 )
