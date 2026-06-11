@@ -63,6 +63,11 @@
 //
 // `person` is the [personal] table from metadata.toml. `tagline` overrides
 // the position text (defaults to person.info's custom-position or "").
+//
+// `subname` (with `subname-prefix` / `subname-suffix`) adds an optional
+// identity line between the name and the tagline — e.g. "legal name
+// Sofía Fernández Lozano, under which all academic publications appear"
+// — sized between the two: subordinate to the name, above the role line.
 
 // Per-contact-type renderers. Each takes the value string and returns the
 // inline box to render. Add a new key here to support a new contact type.
@@ -79,7 +84,7 @@
   location: v => box[#fa-location-dot()  #h(3pt) #v],
 )
 
-#let header(person, tagline: none) = {
+#let header(person, tagline: none, subname: none, subname-prefix: "", subname-suffix: "") = {
   let info = person.info
 
   // Resolve tagline: explicit arg → custom-position icon entry → empty.
@@ -102,6 +107,13 @@
   align(center)[
     // Name — same bold weight, value contrast for readable distinction.
     #text(font: header-font, size: 28pt, weight: "bold", fill: muted)[#person.first_name#h(4pt)]#text(font: header-font, size: 28pt, weight: "bold", fill: body-color)[#person.last_name]
+
+    // Identity subline: italic muted prefix/suffix around a roman name
+    // in body color, set at an intermediate size.
+    #if subname != none [
+      #v(-1pt)
+      #text(size: 10pt, style: "italic", fill: muted)[#subname-prefix#h(4pt)]#text(font: header-font, size: 13pt, fill: body-color)[#subname]#text(size: 10pt, style: "italic", fill: muted)[#subname-suffix]
+    ]
 
     // Position tagline immediately under name (small-caps, body color).
     #if position-text != "" [

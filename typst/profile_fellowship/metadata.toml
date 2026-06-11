@@ -5,6 +5,14 @@
 # Compile:
 #     typst compile cv.typ --input profile=fellowship
 
+# The application is submitted as Elena Jacobo: pen name as the headline
+# identity, legal name declared on the line below — the committee needs it
+# for admin, and it is the byline of the academic publications on page 2.
+# "Elena Jacobo" spelling must match the Creative Work note exactly.
+subname        = "Sofía Fernández Lozano"
+subname_prefix = "legal name"
+subname_suffix = ", the byline of all academic publications"
+
 # Byline: writer first — this CV answers a writing call.
 header_quote = "Writer · Photographer · PhD in Neurosciences"
 
@@ -21,13 +29,13 @@ modules = ["profile", "creative", "community", "research", "workshops", "clinica
     paper_size = "us-letter"
 
 [personal]
-    first_name = "Sofía"
-    last_name  = "Fernández Lozano"
+    first_name = "Elena"
+    last_name  = "Jacobo"
 
     # Single contact line, four items: email, both sites, location.
     # One line keeps the header a clean pyramid (name → byline → contact).
     [personal.info]
-        email     = "sofia.fdzl@pm.me"
+        email     = "elena.jacobo@pm.me"
         website   = "sofiafdzl.com"
         portfolio = "elenajacobo.com"
         location  = "Montréal, QC, Canada"

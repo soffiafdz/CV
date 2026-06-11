@@ -13,6 +13,6 @@
 )
 
 #one-line(
-  [*Français* — reading proficiency],
+  [*Français* — working proficiency],
   [the language of untranslated French feminist and psychoanalytic theory],
 )

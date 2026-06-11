@@ -35,7 +35,13 @@
 
 // === Header =================================================================
 // Reuses the CV header so the letter looks like part of the same document.
-#header(metadata.personal, tagline: metadata.at("header_quote", default: ""))
+#header(
+  metadata.personal,
+  tagline: metadata.at("header_quote", default: ""),
+  subname: metadata.at("subname", default: none),
+  subname-prefix: metadata.at("subname_prefix", default: ""),
+  subname-suffix: metadata.at("subname_suffix", default: ""),
+)
 
 #v(8pt)
 

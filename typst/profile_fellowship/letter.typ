@@ -1,4 +1,6 @@
-// Cover letter content for the academic profile.
+// Cover letter content for the fellowship profile.
+// NOTE: body is still the academic-template placeholder — the real
+// fellowship letter has not been written into this file yet.
 //
 // Edit:
 //   - the four #let bindings below (date, recipient, subject)
@@ -72,4 +74,4 @@ Sincerely,
 
 #v(24pt)
 
-Sofía Fernández Lozano
+Elena Jacobo
