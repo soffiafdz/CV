@@ -143,7 +143,7 @@
   #sc[Invited talk] · 2nd Encounter about Sexualities and Gender, UNAM, Ciudad de México, México · Oct 2018.
 
 - *El derecho a la identidad de infancias y adolescencias transgénero #_en[The right to an identity of transgender children and adolescents].* \
-  #sc[Conversatorium] · Supreme Justice Tribunal of Mexico City, Ciudad de México, México · Jun 2018.
+  #sc[_Conversatorio_] · Supreme Justice Tribunal of Mexico City, Ciudad de México, México · Jun 2018.
 
 - *Hablando Intersex #_en[Speaking Intersex].* \
   #sc[TV interview] · _Ciudad Abierta_ channel, Ciudad de México, México · 2018.
