@@ -47,7 +47,7 @@
   #sc[Sole-authored book chapter] · _Terapia familiar sistémica y la comunidad LGBT+_ #_en[Systemic family therapy and the LGBT+ community] · Pax & Leed · 2019
 
 - *El derecho a la identidad de infancias y adolescencias transgénero* #_en[The right to an identity of transgender children and adolescents] \
-  #sc[Conversatorium] · with the judges of the Supreme Justice Tribunal of Mexico City · 2018
+  #sc[_Conversatorio_] · with the judges of the Supreme Justice Tribunal of Mexico City · 2018
 
 - *Terapias de conversión: perspectiva de la psicología y derechos humanos* #_en[Conversion therapy: a psychology and human-rights perspective] \
   #sc[Invited talk] · 2nd Encounter about Sexualities and Gender, UNAM · 2018

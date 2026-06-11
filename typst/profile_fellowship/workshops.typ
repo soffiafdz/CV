@@ -8,8 +8,8 @@
 #section("Workshops & Mentoring")
 
 #entry(
-  primary: [Workshops, Lectures & Mentoring],
-  tertiary: [McGill University, UNAM, and collaborating labs],
+  primary: [McGill University & UNAM],
+  tertiary: [Workshop facilitator, guest lecturer & peer mentor],
   quaternary: [2021 – Present],
   bullets: (
     [Designed and delivered methodology workshops for peer laboratories; invited graduate lectures and seminar sessions at McGill and UNAM; ongoing one-on-one mentoring of PhD students.],
