@@ -43,14 +43,14 @@
 
 #set list(spacing: 6pt, indent: 6pt, marker: text(fill: muted)[•])
 
-- *Derechos sexuales y reproductivos; reflexiones para terapeutas* #_en[Sexual and reproductive rights; reflections for therapists] \
-  #sc[Sole-authored book chapter] · _Terapia familiar sistémica y la comunidad LGBT+_ #_en[Systemic family therapy and the LGBT+ community] · Pax & Leed · 2019
+- *Derechos sexuales y reproductivos; reflexiones para terapeutas* \
+  #_en[Sexual and reproductive rights; reflections for therapists] \
+  #sc[Sole-authored book chapter] · _Terapia familiar sistémica y la comunidad LGBT+_ · Pax & Leed · 2019
 
-- *El derecho a la identidad de infancias y adolescencias transgénero* #_en[The right to an identity of transgender children and adolescents] \
-  #sc[_Conversatorio_] · with the judges of the Supreme Justice Tribunal of Mexico City · 2018
+- *El derecho a la identidad de infancias y adolescencias transgénero* \
+  #_en[The right to an identity of transgender children and adolescents] \
+  #sc[_Conversatorio_] · with the judges of the Superior Court of Justice of Mexico City · 2018
 
-- *Terapias de conversión: perspectiva de la psicología y derechos humanos* #_en[Conversion therapy: a psychology and human-rights perspective] \
+- *Terapias de conversión: perspectiva de la psicología y derechos humanos* \
+  #_en[Conversion therapy: a psychology and human-rights perspective] \
   #sc[Invited talk] · 2nd Encounter about Sexualities and Gender, UNAM · 2018
-
-- *Hablando Intersex* #_en[Speaking Intersex] \
-  #sc[TV interview] · _Ciudad Abierta_ channel, Ciudad de México · 2018

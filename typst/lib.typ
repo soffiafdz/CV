@@ -205,7 +205,11 @@
       #pad(left: 6pt)[#text(size: 9pt, fill: muted)[#description]]
     ] else if bullets.len() > 0 [
       #v(4pt, weak: true)
-      #set list(spacing: 4pt, indent: 6pt, marker: text(fill: muted)[•])
+      // The gap between bullets must read larger than the leading within a
+      // wrapped bullet, or multi-line items blur into the next. Tighten the
+      // line leading, widen the inter-item gap.
+      #set par(leading: 0.5em)
+      #set list(spacing: 7pt, indent: 6pt, marker: text(fill: muted)[•])
       #list(..bullets)
     ]
   ]

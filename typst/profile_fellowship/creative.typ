@@ -15,18 +15,18 @@
 
 #entry(
   primary: [_Palimpsesto_],
-  tertiary: [Novel · Autofiction · draft complete, in revision],
+  tertiary: [Novel · cross-genre · draft complete, in revision],
   bullets: (
     // Chapter convention verified against the compiled manuscript TOC
     // ("November 2nd, or Noche de muertos"): the ", or" is the book's
     // own format — do not "fix" it away.
-    [A year, November to October, told in chapters titled "_[Date], or [Title]_" and moving through four parts and an epilogue: _Percepción, Connexion, Reflexión, Ausencia_. Poems, vignettes, and flashbacks interleave outside the calendar.],
-    [Narrated in English with its Spanish and French left untranslated; distilled from a decade of daily journals. The palimpsest is the method, not only the title.],
+    [A trans woman's year, and what it costs to write the people in it. November to October, in four parts and an epilogue (_Percepción, Connexion, Reflexión, Ausencia_); chapters titled "_[Date], or [Title]_," such as "_November 2nd, or Noche de muertos_."],
+    [Its form shifts by chapter: conventional third-person, first-person journal, poems, fragmentary prose, and one entirely in transatlantic text; the Spanish and French stay untranslated.],
     // Dalloway / L'Esprit: fine on this private application CV; do NOT
     // propagate to the public website until results/issue are public.
     // Adaptation title deliberately omitted (author's instruction): the
     // shortlisted piece should not be identifiable as the writing sample.
-    [A short story adapted from three of its chapters was shortlisted for the 2026 Clarissa Dalloway Prize for Short Prose and is forthcoming in _L'Esprit Literary Review_. Another short story and three poems drawn from the novel are under consideration at literary magazines.],
+    [Adapted as a short story, shortlisted for the 2026 Clarissa Dalloway Prize for Short Prose and forthcoming in _L'Esprit Literary~Review_.],
   ),
 )
 

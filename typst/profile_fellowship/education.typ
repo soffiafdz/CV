@@ -3,7 +3,7 @@
 #section("Education")
 
 #entry(
-  primary: [PhD in Neurosciences — Defended June 2026],
+  primary: [PhD in Neurosciences],
   tertiary: [Montreal Neurological Institute & McGill University],
   secondary: [Montréal, QC, Canada],
   quaternary: [2020 – 2026],
@@ -11,8 +11,8 @@
 
 #entry(
   primary: [MSc in Neurobiology — Graduated with Honors],
-  tertiary: [Instituto Nacional de Psiquiatría "Ramón de la Fuente Muñiz" & Universidad Nacional Autónoma de México],
-  secondary: [Ciudad de México, México],
+  tertiary: [Universidad Nacional Autónoma de México (UNAM) & Instituto de Neurobiología (INB)],
+  secondary: [Querétaro, México],
   quaternary: [2017 – 2020],
 )
 
@@ -21,4 +21,7 @@
   tertiary: [Universidad Autónoma de Baja California (UABC)],
   secondary: [Tijuana, BC, México],
   quaternary: [2011 – 2016],
+  bullets: (
+    [A clinically oriented licenciatura: small cohorts with supervised practicums in schools, civil-society organizations, and the psychiatric hospital, and seminars in psychoanalytic theory, with supervised practice in Fiorini's brief dynamic psychotherapy (_psicoterapia dinámica breve_).],
+  ),
 )

@@ -14,5 +14,5 @@
 
 #one-line(
   [*Français* — working proficiency],
-  [the language of untranslated French feminist and psychoanalytic theory],
+  [the language of untranslated theory and fiction],
 )

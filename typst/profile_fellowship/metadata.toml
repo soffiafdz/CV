@@ -9,9 +9,9 @@
 # identity, legal name declared on the line below — the committee needs it
 # for admin, and it is the byline of the academic publications on page 2.
 # "Elena Jacobo" spelling must match the Creative Work note exactly.
-subname        = "Sofía Fernández Lozano"
+subname        = "Sofía Fernández-Lozano"
 subname_prefix = "legal name"
-subname_suffix = ", the byline of all academic publications"
+subname_suffix = ""
 
 # Byline: writer first — this CV answers a writing call.
 header_quote = "Writer · Photographer · PhD in Neurosciences"
